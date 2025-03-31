@@ -1,0 +1,172 @@
+.missionsContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--secondary-text);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(76, 223, 255, 0.3);
+}
+
+.missionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.missionCard {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(76, 223, 255, 0.2);
+}
+
+.missionTitle {
+  color: var(--secondary-text);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(76, 223, 255, 0.2);
+  font-size: 1.5rem;
+}
+
+.missionStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+}
+
+.threatLevel {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.threatHigh {
+  background-color: rgba(211, 47, 47, 0.2);
+  color: #ff5252;
+}
+
+.threatSevere {
+  background-color: rgba(198, 40, 40, 0.2);
+  color: #ff1744;
+}
+
+.threatModerate {
+  background-color: rgba(255, 143, 0, 0.2);
+  color: #ffab40;
+}
+
+.missionDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--primary-text);
+  font-size: 0.95rem;
+}
+
+.keyPersonnel {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.keyPersonnel h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.personnelList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.personnelItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.personnelItem:hover {
+  background-color: rgba(76, 223, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.personnelInitial {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(76, 223, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+.personnelInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.personnelName {
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+.personnelRole {
+  font-size: 0.8rem;
+  color: var(--primary-text);
+  opacity: 0.8;
+}
+
+.viewDetailsButton {
+  background-color: var(--button-primary);
+  color: var(--primary-bg);
+  border: none;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.viewDetailsButton:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 0 15px rgba(76, 223, 255, 0.5);
+}

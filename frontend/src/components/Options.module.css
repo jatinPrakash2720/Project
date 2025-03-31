@@ -1,0 +1,329 @@
+/* Update the color variables */
+:root {
+  --primary-bg: #1e2a3a;
+  --card-bg: #2c3e50;
+  --primary-text: #ffffff;
+  --secondary-text: #4cdfff;
+  --accent-color: #ffb347;
+  --button-primary: #4cdfff;
+  --button-hover: #ffffff;
+  --border-color: rgba(76, 223, 255, 0.2);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 15px rgba(76, 223, 255, 0.1);
+}
+
+.optionsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--secondary-text);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(76, 223, 255, 0.3);
+}
+
+/* Top section with three cards */
+.topSectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+  .topSectionGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Stats Card Styles */
+.statsCard,
+.missionsCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.statsCard:hover,
+.missionsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cardTitle {
+  color: var(--secondary-text);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Mission List Styles */
+.missionList {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.missionListHeader {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+
+.missionListItem {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.missionListItem:last-child {
+  border-bottom: none;
+}
+
+.missionStatus {
+  color: #2196f3;
+  font-weight: 600;
+}
+
+.missionOutcome {
+  font-weight: 600;
+}
+
+.successful {
+  color: #4caf50;
+}
+
+.partial {
+  color: #ff9800;
+}
+
+/* Divider */
+.divider {
+  margin: 2rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.sectionTitle {
+  color: var(--secondary-text);
+  display: inline-block;
+  padding: 0 1.5rem;
+  position: relative;
+  background-color: var(--primary-bg);
+  z-index: 1;
+}
+
+.divider:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  z-index: 0;
+}
+
+/* Original styles below */
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.optionCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.optionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.optionCard h2 {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.optionCard p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+}
+
+.optionButton {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--button-primary);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.optionButton:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 0 15px rgba(76, 223, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.simpleCard {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.simpleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(76, 223, 255, 0.2);
+}
+
+.cardDescription {
+  color: var(--primary-text);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.activeMissionsContainer {
+  margin-top: 2rem;
+}
+
+.borderSection {
+  margin-bottom: 2.5rem;
+}
+
+.borderTitle {
+  color: var(--secondary-text);
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid var(--accent-color);
+}
+
+.regionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.missionCard {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(76, 223, 255, 0.2);
+}
+
+.missionCard h3 {
+  color: var(--secondary-text);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.missionDetails {
+  margin-bottom: 1.5rem;
+}
+
+.missionDetails p {
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.missionDetails strong {
+  color: var(--accent-color);
+}
+
+.detailsButton {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--button-primary);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.detailsButton:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 0 15px rgba(76, 223, 255, 0.5);
+  transform: translateY(-2px);
+}
