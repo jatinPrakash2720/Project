@@ -24,9 +24,7 @@ const CurrentMissionStats = () => {
 
   const fetchSoldierData = async () => {
     try {
-      const response = await fetch(
-        "https://fastapi-backend-for-kavach-production.up.railway.app"
-      );
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL);
       if (!response.ok) {
         throw new Error("Failed to fetch soldier data");
       }
@@ -64,8 +62,14 @@ const CurrentMissionStats = () => {
 
   const fetchStrikeData = async () => {
     try {
+      const apiKey = import.meta.env.VITE_API_1;
       const response = await fetch(
-        "https://fastapi-backend-for-kavach-production.up.railway.app/strike_efficiency"
+        `${import.meta.env.VITE_API_BASE_URL}/strike_efficiency`,
+        {
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+          },
+        }
       );
       if (!response.ok) {
         throw new Error("Failed to fetch strike data");
